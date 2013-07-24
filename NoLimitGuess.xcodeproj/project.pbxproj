@@ -142,6 +142,7 @@
 		C4E11F9A179FEBC7007D7D52 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E11F99179FEBC7007D7D52 /* HelloWorldLayer.m */; };
 		C4E11F9D179FEBC7007D7D52 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E11F9C179FEBC7007D7D52 /* IntroLayer.m */; };
 		C4E11FA517A01050007D7D52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4E11FA717A01050007D7D52 /* InfoPlist.strings */; };
+		C4E11FB017A01905007D7D52 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E11FAC17A01905007D7D52 /* libTestFlight.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -428,6 +429,11 @@
 		C4E11F9C179FEBC7007D7D52 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		C4E11FA617A01050007D7D52 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = file; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4E11FA817A01063007D7D52 /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		C4E11FA917A015C8007D7D52 /* NSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLog.h; sourceTree = "<group>"; };
+		C4E11FAC17A01905007D7D52 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		C4E11FAD17A01905007D7D52 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		C4E11FAE17A01905007D7D52 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		C4E11FAF17A01905007D7D52 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -445,6 +451,7 @@
 				C4E11DFF179FEBC4007D7D52 /* CoreGraphics.framework in Frameworks */,
 				C4E11E01179FEBC4007D7D52 /* CoreText.framework in Frameworks */,
 				C4E11E03179FEBC4007D7D52 /* GameKit.framework in Frameworks */,
+				C4E11FB017A01905007D7D52 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,12 +495,14 @@
 		C4E11E04179FEBC4007D7D52 /* NoLimitGuess */ = {
 			isa = PBXGroup;
 			children = (
+				C4E11FA917A015C8007D7D52 /* NSLog.h */,
 				C4E11F95179FEBC7007D7D52 /* AppDelegate.h */,
 				C4E11F96179FEBC7007D7D52 /* AppDelegate.m */,
 				C4E11F98179FEBC7007D7D52 /* HelloWorldLayer.h */,
 				C4E11F99179FEBC7007D7D52 /* HelloWorldLayer.m */,
 				C4E11F9B179FEBC7007D7D52 /* IntroLayer.h */,
 				C4E11F9C179FEBC7007D7D52 /* IntroLayer.m */,
+				C4E11FAA17A01904007D7D52 /* Externals */,
 				C4E11E05179FEBC4007D7D52 /* Resources */,
 				C4E11E1D179FEBC4007D7D52 /* libs */,
 				C4E11F91179FEBC7007D7D52 /* Supporting Files */,
@@ -883,6 +892,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C4E11FAA17A01904007D7D52 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				C4E11FAB17A01905007D7D52 /* TestFlightSDK1.2.6 */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		C4E11FAB17A01905007D7D52 /* TestFlightSDK1.2.6 */ = {
+			isa = PBXGroup;
+			children = (
+				C4E11FAF17A01905007D7D52 /* TestFlight.h */,
+				C4E11FAC17A01905007D7D52 /* libTestFlight.a */,
+				C4E11FAD17A01905007D7D52 /* README.md */,
+				C4E11FAE17A01905007D7D52 /* release_notes.md */,
+			);
+			path = TestFlightSDK1.2.6;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1139,6 +1167,10 @@
 				GCC_PREFIX_HEADER = NoLimitGuess/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"NoLimitGuess/libs/kazmath/include\"";
 				INFOPLIST_FILE = NoLimitGuess/Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/NoLimitGuess/Externals/TestFlightSDK1.2.6\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -1158,6 +1190,10 @@
 				GCC_PREFIX_HEADER = NoLimitGuess/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"NoLimitGuess/libs/kazmath/include\"";
 				INFOPLIST_FILE = NoLimitGuess/Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/NoLimitGuess/Externals/TestFlightSDK1.2.6\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
