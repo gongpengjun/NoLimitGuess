@@ -141,6 +141,7 @@
 		C4E11F97179FEBC7007D7D52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E11F96179FEBC7007D7D52 /* AppDelegate.m */; };
 		C4E11F9A179FEBC7007D7D52 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E11F99179FEBC7007D7D52 /* HelloWorldLayer.m */; };
 		C4E11F9D179FEBC7007D7D52 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E11F9C179FEBC7007D7D52 /* IntroLayer.m */; };
+		C4E11FA517A01050007D7D52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4E11FA717A01050007D7D52 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -425,6 +426,8 @@
 		C4E11F99179FEBC7007D7D52 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		C4E11F9B179FEBC7007D7D52 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		C4E11F9C179FEBC7007D7D52 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		C4E11FA617A01050007D7D52 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = file; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C4E11FA817A01063007D7D52 /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -513,6 +516,7 @@
 				C4E11E18179FEBC4007D7D52 /* Icon@2x.png */,
 				C4E11E1A179FEBC4007D7D52 /* Info.plist */,
 				C4E11E1B179FEBC4007D7D52 /* iTunesArtwork */,
+				C4E11FA717A01050007D7D52 /* InfoPlist.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -914,6 +918,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = C4E11DE4179FEBC4007D7D52;
 			productRefGroup = C4E11DEE179FEBC4007D7D52 /* Products */;
@@ -942,6 +947,7 @@
 				C4E11E19179FEBC4007D7D52 /* Icon@2x.png in Resources */,
 				C4E11E1C179FEBC4007D7D52 /* iTunesArtwork in Resources */,
 				C4E11F75179FEBC7007D7D52 /* ChangeLog in Resources */,
+				C4E11FA517A01050007D7D52 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1069,6 +1075,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		C4E11FA717A01050007D7D52 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4E11FA617A01050007D7D52 /* en */,
+				C4E11FA817A01063007D7D52 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		C4E11F9E179FEBC7007D7D52 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1169,6 +1188,7 @@
 				C4E11FA2179FEBC7007D7D52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
